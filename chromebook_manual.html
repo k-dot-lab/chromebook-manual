@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chromebook セットアップマニュアル</title>
+    <style>
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, 'MS ゴシック', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #2c3e50;
+            margin: 0;
+            font-size: 28px;
+        }
+        .header .subtitle {
+            color: #7f8c8d;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .step {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .step-title {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 20px;
+            margin: -20px -20px 20px -20px;
+            border-radius: 8px 8px 0 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .substep {
+            margin: 15px 0;
+            padding: 15px;
+            background-color: white;
+            border-left: 4px solid #3498db;
+            border-radius: 0 5px 5px 0;
+        }
+        .substep h4 {
+            color: #2980b9;
+            margin: 0 0 10px 0;
+            font-size: 16px;
+        }
+        .manual-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            margin: 15px 0;
+            display: block;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .image-caption {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .warning {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .success {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .button-style {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 5px;
+        }
+        .download-section {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #e8f5e8;
+            border-radius: 8px;
+        }
+        .download-btn {
+            background-color: #2196F3;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+        }
+        .download-btn:hover {
+            background-color: #1976D2;
+        }
+        .file-structure {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+        ol, ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 8px 0;
+        }
+        @media print {
+            body { background-color: white; }
+            .container { box-shadow: none; }
+            .download-section { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Chromebook セットアップマニュアル</h1>
+        </div>
+
+        <div class="highlight">
+            <strong>概要:</strong> このマニュアルでは、教育用Chromebookをすらら学習プラットフォームで使用するための設定手順を説明します。言語設定、システム更新、ネットワーク設定、動作確認まで包括的にカバーしています。
+        </div>
+
+        <div class="step">
+            <div class="step-title">ステップ 1: 言語とキーボード設定</div>
+            
+            <div class="substep">
+                <h4>1.1 初期ウェルカム画面</h4>
+                <img src="image01.jpg" alt="初期起動画面" class="manual-image">
+                <div class="image-caption">画像1: 初期起動画面「Chromebookへようこそ」</div>
+                <ul>
+                    <li>Chromebookが起動すると「Chromebookへようこそ」画面が表示されます</li>
+                    <li>初期状態では日本語で表示されています</li>
+                    <li>日本語ボタンをクリックして次に進みます</li>
+                </ul>
+            </div>
+
+            <div class="substep">
+                <h4>1.2 言語選択</h4>
+                <img src="image02.jpg" alt="言語とキーボード選択画面" class="manual-image">
+                <div class="image-caption">画像2: 言語とキーボード選択画面（日本語）</div>
+                <ul>
+                    <li>「言語とキーボードの選択」画面に移動します</li>
+                    <li>言語のドロップダウンから<strong>「English」</strong>を選択します</li>
+                    <li>これにより、インターフェース言語が英語に変更されます</li>
+                </ul>
+            </div>
+
+            <div class="substep">
+                <h4>1.3 キーボード設定</h4>
+                <img src="image03.jpg" alt="キーボード選択画面" class="manual-image">
+                <div class="image-caption">画像3: キーボード選択画面（英語）</div>
+                <ul>
+                    <li>キーボードセクションで「Japanese」から<strong>「US International (PC)」</strong>に変更します</li>
+                    <li>ドロップダウンには以下のオプションが表示されます：
+                        <ul>
+                            <li>Japanese</li>
+                            <li>Other keyboards</li>
+                            <li>US</li>
+                            <li><strong>US International (PC)</strong> ← この選択肢を選びます</li>
+                            <li>US extended</li>
+                            <li>その他の地域バリエーション</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="substep">
+                <h4>1.4 設定確認</h4>
+                <img src="image04.jpg" alt="英語インターフェースのウェルカム画面" class="manual-image">
+                <div class="image-caption">画像4: 英語インターフェースのウェルカム画面</div>
+                <ul>
+                    <li>英語とUS Internationalキーボードを選択後、画面が更新されます</li>
+                    <li>「Welcome to your Chromebook」と表示されます</li>
+                    <li>インターフェース言語が正常に英語に変更されました</li>
+                    <li><span class="button-style">Get started</span>をクリックして続行します</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-title">ステップ 2: WiFi接続とOS更新</div>
+            
+            <div class="substep">
+                <h4>2.1 ネットワーク接続</h4>
+                <img src="image05.jpg" alt="WiFiネットワーク選択画面" class="manual-image">
+                <div class="image-caption">画像5: WiFiネットワーク選択画面</div>
+                <ul>
+                    <li>利用可能なWiFiネットワークのリストが表示されます</li>
+                    <li>リストから希望するネットワークを選択します</li>
+                    <li>WiFiパスワードを入力し、<span class="button-style">Next</span>をクリックして接続します</li>
+                </ul>
+            </div>
+
+            <div class="substep">
+                <h4>2.2 アカウント設定オプション</h4>
+                <img src="image06.jpg" alt="Chromebook設定オプション選択画面" class="manual-image">
+                <div class="image-caption">画像6: Chromebook設定オプション選択画面</div>
+                <ul>
+                    <li>システムが設定オプションを提示します：
+                        <ul>
+                            <li><strong>For personal use</strong> - 個人のGoogleアカウントを使用を選択します</li>
+                </ul>
+            </div>
+
+            <div class="substep">
+                <h4>2.3 ソフトウェア更新の検出</h4>
+                <img src="image07.jpg" alt="ソフトウェア更新利用可能画面" class="manual-image">
+                <div class="image-caption">画像7: ソフトウェア更新利用可能画面</div>
+                <ul>
+                    <li>システムが自動的に更新をチェックします</li>
+                    <li>「Software update available」画面が表示されます</li>
+                    <li>モバイルネットワークでの更新に関する警告が表示されます</li>
+                    <li>2つのオプションが提供されます：
+                        <ul>
+                            <li>「Skip and remind me later」</li>
+                            <li><strong>「Install update」</strong> ← このオプションを選択</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="substep">
+                <h4>2.4 更新のインストール</h4>
+                <img src="image08.jpg" alt="アップデートインストール進行画面" class="manual-image">
+                <div class="image-caption">画像8: アップデートインストール進行画面</div>
+                <ul>
+                    <li><span class="button-style">Install update</span>をクリックして更新プロセスを開始します</li>
+                    <li>「Installing the latest update」と進行状況が表示されます</li>
+                    <li>更新完了まで待機</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-title">ステップ 3: ゲストブラウジング設定</div>
+            
+            <div class="substep">
+                <h4>3.1 アカウントオプション</h4>
+                <img src="image09.jpg" alt="Googleアカウントサインイン画面" class="manual-image">
+                <div class="image-caption">画像9: Googleアカウントサインイン画面</div>
+                <ul>
+                    <li>更新後、Googleアカウントサインイン画面が表示されます</li>
+                    <li>画面左下にある<strong>「Enter your Google Account and password」</strong>を見つけてクリックします</li>
+                </ul>
+            </div>
+
+            <div class="substep">
+                <h4>3.2 利用規約</h4>
+                <img src="image10.jpg" alt="ゲストブラウジング利用規約画面" class="manual-image">
+                <div class="image-caption">画像10: ゲストブラウジング利用規約画面</div>
+                <ul>
+                    <li>「Browse as a Guest」画面が表示されます</li>
+ 　　　　　　　　　 <li>このオプションにより、GoogleアカウントにサインインせずにChromebookを使用できます</li>
+                </ul>
+            </div>
+
+            <div class="substep">
+                <h4>3.3 デスクトップアクセス</h4>
+                <img src="image11.jpg" alt="Chromebookデスクトップ画面" class="manual-image">
+                <div class="image-caption">画像11: Chromebookデスクトップ画面</div>
+                <ul>
+                    <li><span class="button-style">Accept and continue</span>をクリックして続行します</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-title">ステップ 4: カメラとQRコードテスト</div>
+            
+            <div class="substep">
+                <h4>4.1 カメラアプリケーションを開く</h4>
+                <img src="image12.jpg" alt="カメラアプリの起動" class="manual-image">
+                <div class="image-caption">画像12: カメラアプリの起動</div>
+                <ul>
+                    <li>タスクバーまたはアプリランチャーから<strong>Cameraアプリ</strong>をクリックします</li>
+                    <li>カメラアプリケーションがビューファインダーアクティブで開きます</li>
+                    <li>Video、Photo、Scanモードのコントロールが表示されます</li>
+                </ul>
+            </div>
+
+            <div class="substep">
+                <h4>4.2 QRコードスキャン</h4>
+                <img src="image13.jpg" alt="QRコード検出画面" class="manual-image">
+                <div class="image-caption">画像13: QRコード検出画面</div>
+                <ul>
+                    <li>QRコードをカメラの前に配置します</li>
+                    <li>カメラが自動的にQRコードを検出して表示します</li>
+                    <li>上部にURL「Open https://lms.catchon.jp?f=en&lng=si」が表示されます</li>
+                    <li>検出されたURLをクリック(or指でスクリーンを押す)して開きます</li>
+                </ul>
+            </div>
+
+            <div class="substep">
+                <h4>4.3 カメラフォトモード確認</h4>
+                <img src="image14.jpg" alt="カメラアプリのフォトモード" class="manual-image">
+                <div class="image-caption">画像14: カメラアプリのフォトモード</div>
+                <ul>
+                    <li>もしPhotoでQRコードを読み取り難しければScanモードを使用</li>
+                </ul>
+            </div>
+
+            <div class="substep">
+                <h4>4.4 すららログイン確認</h4>
+                <img src="image15.jpg" alt="すららログイン画面" class="manual-image">
+                <div class="image-caption">画像15: すららログイン画面</div>
+                <ul>
+                    <li>ブラウザがすらら学習プラットフォームに移動します</li>
+                    <li>各自のID／PASSWORDでログインしてすらら動作確認を行います</li>
+                    <li>これでカメラとWebブラウジング機能も正常に動作していることが確認されます</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-title">ステップ 5: 最終ラベリング</div>
+            
+            <div class="substep">
+                <h4>5.1 デバイス識別</h4>
+                <img src="image16.jpg" alt="Chromebook背面のすららシール" class="manual-image">
+                <div class="image-caption">画像16: Chromebook背面のすららシール</div>
+                <ul>
+                    <li>Chromebook表面に管理用シールを貼り付けます</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="success">
+            <strong>🎉 セットアップ完了</strong><br>
+            Chromebookがすらら学習プラットフォームでの使用に向けて設定されました。デバイスは以下で設定されています：<br><br>
+            ✅ 英語インターフェース<br>
+            ✅ US Internationalキーボードレイアウト<br>
+            ✅ 最新OS更新インストール済み<br>
+            ✅ ゲストブラウジングモード有効<br>
+            ✅ カメラとQRコードスキャン確認済み<br>
+            ✅ すららプラットフォームアクセス、動作確認済み<br>
+            ✅ デバイスをラベリング・識別済み<br><br>
+            <strong>Chromebookは教育用途に準備完了で、ブラウザを通じてすらら学習管理システムにアクセスできます。</strong>
+        </div>
+
+        <div class="download-section">
+            <h3>📄 PDFダウンロード</h3>
+            <p>このマニュアルをPDF形式でダウンロードまたは印刷できます</p>
+            <button class="download-btn" onclick="downloadPDF()">📥 PDFとしてダウンロード</button>
+            <button class="download-btn" onclick="window.print()">🖨️ 印刷する</button>
+        </div>
+    </div>
+
+    <script>
+        function downloadPDF() {
+            // PDFダウンロード機能
+            const element = document.querySelector('.container');
+            const opt = {
+                margin: 0.5,
+                filename: 'Chromebook_Setup_Manual_すらら.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { 
+                    scale: 2,
+                    useCORS: true,
+                    allowTaint: true
+                },
+                jsPDF: { 
+                    unit: 'in', 
+                    format: 'a4', 
+                    orientation: 'portrait' 
+                }
+            };
+            
+            // html2pdfライブラリを使用してPDF生成
+            if (typeof html2pdf !== 'undefined') {
+                html2pdf().set(opt).from(element).save();
+            } else {
+                // html2pdfが利用できない場合のフォールバック
+                alert('PDF生成機能を準備しています。しばらくお待ちください...');
+                loadHtml2PDF().then(() => {
+                    html2pdf().set(opt).from(element).save();
+                });
+            }
+        }
+
+        function loadHtml2PDF() {
+            return new Promise((resolve) => {
+                const script = document.createElement('script');
+                script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
+                script.onload = resolve;
+                script.onerror = () => {
+                    alert('PDF生成ライブラリの読み込みに失敗しました。印刷機能をご利用ください。');
+                    resolve();
+                };
+                document.head.appendChild(script);
+            });
+        }
+
+        // 画像読み込みエラーハンドリング
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.manual-image');
+            images.forEach(function(img) {
+                img.onerror = function() {
+                    this.style.display = 'none';
+                    const caption = this.nextElementSibling;
+                    if (caption && caption.classList.contains('image-caption')) {
+                        caption.innerHTML += '<br><span style="color: red; font-size: 12px;">⚠️ 画像ファイルが見つかりません: ' + this.src.split('/').pop() + '</span>';
+                    }
+                };
+            });
+        });
+
+        // ページ読み込み時にhtml2pdfライブラリを事前読み込み
+        window.addEventListener('load', () => {
+            loadHtml2PDF();
+        });
+    </script>
+</body>
+</html>
